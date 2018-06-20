@@ -6,7 +6,10 @@ In our example, we have files/AlexSmith.jpg, and subsequently after the executio
 Instructions:
 
 * Edit the scripts to include your API key, change the region if needed, and configure a custom LargePersonGroup name if needed
-* Run lpg-create.sh
- * This will create a LargePersonGroup with the name 'employees'
-* Ensure that all files are in files/
+* Run lpg-create.sh -- this will create a LargePersonGroup with the name 'employees'
+* Ensure that all files are in the files/, 
 * Run lpg-populate.sh
+
+To do (in addition to what is listed in the script itself)
+
+* Add checks to avoid duplication of created persons
