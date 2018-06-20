@@ -22,7 +22,7 @@
 
 ## Vars
 # Define your API Key
-apiKey="0e1ba9b68a33439d8e219c0c0e83de56"
+apiKey=""
 
 # Define your region 
 # If unspecified, defaults to southeastasia
