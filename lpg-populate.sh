@@ -146,11 +146,13 @@ fileList=$(find ${filePath} -type f)
 
 for image in ${fileList}; do
     derivedName=$(basename $(echo ${image}) | awk -F. '{print $1}')
+    echo "$(date): Person ${derivedName} created"
     personId=$(createPerson ${derivedName})
+    echo "$(date): Image associated with ${derivedName}"
     addFacetoPerson ${personId} ${image}
 done
 
 # Once complete, train the group
 trainGroup
 
-echo "complete"
+echo "$(date): Process complete"
