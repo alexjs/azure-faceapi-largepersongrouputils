@@ -102,7 +102,7 @@ addFacetoPerson () {
     personId=${1}
     faceFile=${2}
     
-    requestOutput=$(curl -v \
+    requestOutput=$(curl -s \
         -H "Ocp-Apim-Subscription-Key: ${apiKey}" \
         -H "Content-Type: application/octet-stream" \
         --data-binary @${faceFile} \
