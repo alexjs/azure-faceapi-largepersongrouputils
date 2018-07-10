@@ -9,6 +9,8 @@ regionOverride=""
 
 # Define your LPG Name
 lpgNameOverride=""
+# Define your WorkSpace Key (this is used by certain apps to filter, and is placed into the metadata)
+workspaceKey=""
 
 ## Defaults
 region=${regionOverride:=southeastasia}
@@ -19,7 +21,7 @@ lpgName=${lpgNameOverride:=employees}
 
 requestBody="{
     \"name\": \"${lpgName}\",
-    \"userData\": \"Large Person Group created by lpg-create.sh at $(date)\"
+    \"userData\": \"${workspaceKey}\"
 }"
 
 requestOutput=$(echo ${requestBody} | curl -s \
